@@ -20,7 +20,7 @@ def homepage(request):
             image_base64 = base64.b64encode(image.read()).decode("utf-8")
         except:
             messages.add_message(
-                request, messages.ERROR, "No image selected or uploaded"
+                request, messages.ERROR, "No se seleccionó ninguna imagen."
             )
             return render(request, "home.html")
         lang = request.POST["language"]
